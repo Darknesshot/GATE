@@ -1,3 +1,7 @@
 /*
 modelo base do design
 */
+*{
+    margin: 0;
+    padding: 0;
+}
