@@ -17,9 +17,9 @@ body{
 nav.menu-lateral{
     width: 80px;
     height: 100vh;
-    background-color: #202020;
+    background-color: #000000;
     padding: 40px 0 40px 1%;
-    box-shadow: 3px 0 0 #FF0077;
+    box-shadow: 3px 0 0 #fcef37;
 
     position: fixed;
     top: 0;
@@ -34,13 +34,15 @@ nav.menu-lateral.expandir{
 
 .btn-expandir{
     width: 100%;
-    padding-left: 10px;
+    padding-left: 15px;
+    padding-bottom: 5px;
 }
 
 .btn-expandir > i{
     color: #ffff;
     font-size: 24px;
     cursor: pointer;
+    
 }
 
 ul{
@@ -53,11 +55,11 @@ ul li.Item-menu{
 }
 
 ul li.ativo{
-    background-color: #FF0077;
+    background-color: #fdee20ea;
 }
 
 ul li.Item-menu:hover{
-    background: #FF0077;
+    background: #7a7352;
 }
 
 ul li.Item-menu a{
