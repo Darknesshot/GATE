@@ -1,88 +1,173 @@
 /*
 modelo base do design
 */
-@import url('https://fonts.googleapis.com/css2?family-Outfit:wght@300&display-swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Bruno Ace', sans-serif;
 }
 
 body{
-    height: 100vh;
-}
+    /* variavel */
+    --color-secundaria: #393939;
+    --color-principal: #6B6B6B;
+    --color-branquelo: #F8EDED;
+    --colo-laranjo: #01FFFF;
+    --colo-baralateral: #66ebebe0;
+    --color-grafico: rgba(165, 165, 165, 0.137);
+    --color-terminal: rgba(27, 27, 27, 0.507);
 
-nav.menu-lateral{
-    width: 80px;
-    height: 100vh;
-    background-color: #000000;
-    padding: 40px 0 40px 1%;
-    box-shadow: 3px 0 0 #fcef37;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    transition: .5s;
-}
-
-nav.menu-lateral.expandir{
-    width: 300px;
-}
-
-.btn-expandir{
-    width: 100%;
-    padding-left: 15px;
-    padding-bottom: 5px;
-}
-
-.btn-expandir > i{
-    color: #ffff;
-    font-size: 24px;
-    cursor: pointer;
-    
-}
-
-ul{
-    height: 100%;
-    list-style-type: none;
-}
-
-ul li.Item-menu{
-    transition: .2s;
-}
-
-ul li.ativo{
-    background-color: #fdee20ea;
-}
-
-ul li.Item-menu:hover{
-    background: #7a7352;
-}
-
-ul li.Item-menu a{
-    color: #ffff;
-    text-decoration: none;
-    font-size: 20px;
+    /* cod */
     display: flex;
-    margin-bottom: 20px;
-    line-height: 40px;
+    height: 100vh;
+    width: 100%;
+    flex-direction: row;
+}
+section{
+
+    justify-content: space-between;
+    align-content: stretch;
 }
 
-ul li.Item-menu a .txt-link{
-    margin-left: 70px;
-    transition: 1s;
-    opacity: 0;
-}
+/* nav bar */
 
-nav.menu-lateral.expandir .txt-link{
-    margin-left: 40px;
+.navbar{
+    width: 250px;
+    background-color: var(--color-principal);
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
     opacity: 1;
+    border-right: 3px solid rgba(63, 63, 63, 0.644);
 }
 
-ul li.Item-menu a .icon > i{
-    font-size: 30px;
-    margin-left: 10px;
+.navbar-menu{
+    margin-top: 100px;
+}
+
+.logo{
+    justify-content: center;
+    margin-top: 25px;
+    margin-left: 60px;
+    margin-bottom: 25px;
+}
+.logo img{
+    width: 125px;
+    height: 125px;
+}
+ ul{
+    list-style-type: none;
+ }
+ .Item-menu{
+    margin-left: 30px;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 10px;
+ }
+ .Item-menu a{
+    text-decoration: none;
+    color: white;
+    transition: .5s;
+ }
+ .Item-menu:hover{
+    background-color: var(--colo-baralateral);
+ }
+ .Item-menu span{
+    margin-right: 20px;
+ }
+
+ .ativo{
+    color: black;
+    background-color: var(--colo-laranjo);
+ }
+
+ .conta{
+    margin-top: 350px;
+    margin-left: 90px;
+    align-items: end;
+    border-radius: 50%;
+ }
+ .conta:hover{
+    background-color: var(--color-terminal);
+ }
+
+ /* gráfico principal */
+
+ .grafico-principal{
+    width: 1200px;
+    flex-direction: column;
+    padding-left: 60px;
+    padding-top: 10px;
+    background-color: var(--color-secundaria);
+ }
+ .grafico{
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    width: 950px;
+    height: 550px;
+    
+    background-color: var(--color-principal);
+    padding: 10px;
+    border-radius: 20px;
+ }
+ .grafico canvas{
+    background-color: var(--color-grafico);
+ }
+
+ .terminal-saldo{
+    margin-top: 90px;
+    background-color: var(--color-principal);
+    width: 950px;
+    height: 280px;
+    border-radius: 20px;
+    padding: 20px;
+    color: var(--color-branquelo);
+}
+.terminal-tabelaSaldo{
+    display: flex;
+    align-content: center;
+    width: 910px;
+    height: 70px;
+    background-color: var(--color-terminal);
+    padding: 10px;
+    padding-left: 90px;
+    border-radius: 10px;
+}
+.terminal-saldo h1{
+    margin-right: 90px;
+}
+
+
+ /* gráfico e notificação na parte lateral */
+
+ .grafico-lateral{
+    width: 500px;
+    background-color: var(--color-secundaria);
+    padding: 10px;
+ }
+ .grafico2{
+    background-color: var(--color-principal);
+    border-radius: 20px;
+ }
+ .nitificacao{
+    border-radius: 20px;
+    height: 420px;
+    margin-top: 30px;
+    background-color: var(--color-principal);
+
+}
+.icones{
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+.icones span{
+    margin-right: 10px;
+    color: var(--color-branquelo);
+}
+.icones h3{
+    color: var(--color-branquelo);
 }

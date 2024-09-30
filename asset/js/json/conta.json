@@ -1,0 +1,8 @@
+{
+    "ID": 1,
+    "nome": "Mateus",
+    "email": "emailUser@gmail.com",
+    "senha": 256783,
+    "saldo": 3000,
+    "dispesa": []
+}
