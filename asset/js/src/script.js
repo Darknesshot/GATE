@@ -33,7 +33,7 @@ new Chart(ctx, {
                 intersect: false,
             },
             legend: {
-                display: true,
+                display: false,
                 position: "bottom",
                 labels: {
                     color: "white",
@@ -97,6 +97,8 @@ new Chart(ctx2, {
                     "rgba(255, 99, 132, 0.7)",
                     "rgba(255, 206, 86, 0.7)",
                     "rgba(54, 162, 235, 0.7)",
+                    "rgba(126, 40, 237, 0.7)",
+                    "rgba(230, 30, 130, 0.7)",
                 ],
                 borderWidth: 1,
             },

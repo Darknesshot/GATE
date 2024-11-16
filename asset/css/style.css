@@ -84,13 +84,14 @@ section{
  }
 
  .conta{
+   display: flex;
+   justify-content: center;
     margin-top: 350px;
-    margin-left: 90px;
     align-items: end;
-    border-radius: 50%;
  }
- .conta:hover{
-    background-color: var(--color-terminal);
+ .conta a:hover{
+    background-color: var(--color-secundaria);
+    border-radius: 50%;
  }
 
  /* gráfico principal */
@@ -125,6 +126,9 @@ section{
     border-radius: 20px;
     padding: 20px;
     color: var(--color-branquelo);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .terminal-tabelaSaldo{
     display: flex;
@@ -140,14 +144,32 @@ section{
     margin-right: 90px;
 }
 
+.modolos{
+   background: var(--color-secundaria);
+   height: 45px;
+   width: 50px;
+   border-radius: 5px;
+}
+
+.plus img{
+   height: 50px;
+   color: var(--color-branquelo);
+}
 
  /* gráfico e notificação na parte lateral */
 
  .grafico-lateral{
     width: 500px;
-    background-color: var(--color-secundaria);
     padding: 10px;
+    background: var(--color-secundaria);
+    
+    
  }
+.grafico-lateral div{
+   display: flex;
+   justify-content: center;
+}
+
  .grafico2{
     background-color: var(--color-principal);
     border-radius: 20px;
@@ -157,7 +179,6 @@ section{
     height: 420px;
     margin-top: 30px;
     background-color: var(--color-principal);
-
 }
 .icones{
     padding-top: 15px;

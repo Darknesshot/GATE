@@ -17,3 +17,8 @@ function selectLink() {
 menuItem.forEach((item) => {
     item.addEventListener("click", selectLink);
 });
+
+// evento de click
+ let add = document.querySelectorAll("#plus")
+
+ 
