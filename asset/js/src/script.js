@@ -1,6 +1,9 @@
 const mes = ["janeiro", "fevereiro", "março", "abril", "maio", "junho"];
+let categ = ["Receitas", "Dispesas", "Outros"];
 
 const ctx = document.getElementById("grafico1");
+let dadosSaldo = [1512, 1400, 1200, 1375, 900, 1475]
+let dadosDispesa = [1247, 1115, 1300, 975, 3000, 1400]
 
 new Chart(ctx, {
     type: "line",
@@ -9,14 +12,14 @@ new Chart(ctx, {
         datasets: [
             {
                 label: "Saldo",
-                data: [12, 19, 3, 5, 2, 3],
+                data: dadosSaldo,
                 borderColor: "green",
                 backgroundColor: "rgb(0, 255, 34, 0.2)",
                 fill: true,
             },
             {
                 label: "Despesa",
-                data: [13, 5, 4, 10, 6, 2],
+                data: dadosDispesa,
                 borderColor: "red",
                 backgroundColor: "rgba(255, 0, 0, 0.2)",
                 fill: true,
@@ -83,23 +86,19 @@ new Chart(ctx, {
 });
 
 const ctx2 = document.getElementById("graficoLateral");
+let receita = 250;
+let dispesa = 175;
+let outros = 800;
 
 new Chart(ctx2, {
     type: "doughnut",
     data: {
-        labels: mes,
+        labels: categ,
         datasets: [
             {
                 label: "Distribuição de Vendas",
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    "rgba(75, 192, 192, 0.7)",
-                    "rgba(255, 99, 132, 0.7)",
-                    "rgba(255, 206, 86, 0.7)",
-                    "rgba(54, 162, 235, 0.7)",
-                    "rgba(126, 40, 237, 0.7)",
-                    "rgba(230, 30, 130, 0.7)",
-                ],
+                data: [receita, dispesa, outros],
+                backgroundColor: ["rgba(75, 192, 192, 0.7)", "rgba(255, 99, 132, 0.7)", "rgba(255, 206, 86, 0.7)"],
                 borderWidth: 1,
             },
         ],
@@ -132,4 +131,9 @@ new Chart(ctx2, {
             },
         },
     },
+});
+
+const saldos = array.forEach(dadosSaldo => {
+    let resultado = dadosSaldo - dadosDispesa
+    return resultado
 });

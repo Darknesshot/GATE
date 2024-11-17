@@ -42,10 +42,7 @@
         </div>
     </section>
     <section class="grafico-principal">
-        <!-- para incerrir dados no gráfico -->
-        <div class="coloca-dados">
-            
-        </div>
+    
         <!-- gráfico principal de visualização -->
         <div class="grafico">
             <canvas id="grafico1"></canvas>
@@ -53,15 +50,46 @@
         <!-- meio de visualização de saldo -->
         <div class="terminal-saldo">
             <div class="terminal-tabelaSaldo">
-                <h1>Saldo</h1>
-                <h1>oi</h1>
+                <h1>Saldo:</h1>
+                <h1 id="saldo">1475</h1>
             </div>
             <div class="terminal-tabelaDespesa">
-                <h1>Despesa</h1>
-                <p>oi</p>
+                <h1>Dispesa:</h1>
+                <h1 id="dispesa">-1400</h1>
             </div>
             <div class="modolos">
                 <a href="#" class="plus" id="plus"><img src="asset/img/plus.svg" alt="plus"></span></a>
+            </div>
+        </div>
+            <!-- para incerrir dados no gráfico -->
+        <div class="adicionar" id="add">
+            <div class="preco">
+                <label for="">Preço: </label>
+                <input type="text" placeholder="Preço pago">
+            </div>
+            
+            <div class="categ">
+                <label for="">Categoria</label>
+            
+                <div class="drop">
+                    <a href="#" id="mydrop">None</a>
+                    <ul id="view">
+                        <li id="R">
+                            <h3>Receita</h3>
+                        </li>
+                        <li id="D">
+                            <h3>Dispesa</h3>
+                        </li>
+                        <li id="O">
+                            <h3>outros</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="exit">
+                <a href="#" class="concl">Concluir</a>
+                <a href="#" class="cancel" id="cancel">Cancelar</a>
             </div>
         </div>
     </section>
